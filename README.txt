@@ -8,5 +8,6 @@ Probably not, this is more of a personal project for learning.
 Lincense: MIT
 
 To Do: 
--Figure out how package the .py file(with correct .ico pathing/pathing definitions) using pyinstaller/auto-py-to-exe.
 -Experement with other GUI interfaces (ie; custom tkinter, visual python).
+-Figure out how to customize the title bar.
+-Figure out how package the .py file(with correct .ico pathing/pathing definitions) using pyinstaller/auto-py-to-exe.

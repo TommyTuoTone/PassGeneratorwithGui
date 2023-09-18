@@ -91,6 +91,7 @@ class PassGeneratorApp:
         self.textbox.insert('1.0', generated_password)
         self.textbox.tag_configure('invalid', foreground='red' if 'Invalid' in generated_password else 'black')
         self.textbox.configure(state='disabled')
+        self.flash_textbox(times=1, delay=0.1)
 
     def copy_to_clipboard(self):
         self.root.clipboard_clear()

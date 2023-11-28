@@ -3,7 +3,7 @@
 #  |     ___/\__  \  /  ___//  ___/ /   \  ____/ __ \ /    \_/ __ \_  __ \__  \\   __\/  _ \_  __ \
 #  |    |     / __ \_\___ \ \___ \  \    \_\  \  ___/|   |  \  ___/|  | \// __ \|  | (  <_> )  | \/
 #  |____|    (____  /____  >____  >  \______  /\___  >___|  /\___  >__|  (____  /__|  \____/|__|
-# PassGenerator   \/  By:\/Tommy\/TouTone   \/     \/     \/     \/           \/
+# PassGenerator   \/  By:\/Tom  \/          \/     \/     \/     \/           \/
 
 import tkinter as tk
 import os
@@ -25,27 +25,23 @@ class PassGeneratorApp:
         root.config(bg='#202124')
 
     def setup_ui(self):
-        self.setup_frame_1()
+        self.frame_2 = tk.LabelFrame(self.root, font=('Arial', 18), bg='#202124', borderwidth=1, relief='flat')
+        self.frame_2.pack(padx=0, pady=0, anchor='center')
 
-    def setup_frame_1(self):
-        self.frame_1 = tk.LabelFrame(self.root, font=('Arial', 18), bg='#202124', borderwidth=1, relief='flat')
-        self.frame_1.pack(padx=0, pady=0, anchor='center')
+        tk.Label(self.frame_2, text="PassGenerator", font=('Arial', 18, 'bold'), fg='#B4A5A5', bg='#202124').pack(padx=0, pady=0, anchor='center')
+        tk.Label(self.frame_2, text="By: TommyTuoTone", font=('Arial', 15, 'bold'), fg='#B4A5A5',bg='#202124').pack(padx=0, pady=0, anchor='center')
+        tk.Label(self.frame_2, text="Password Length:", font=('Arial', 14, 'bold'), fg='#B4A5A5', bg='#202124').pack(padx=0, pady=0, anchor='center')
 
-        tk.Label(self.frame_1, text="PassGenerator", font=('Arial', 18, 'bold'), fg='#2ea043', bg='#202124').pack(padx=0, pady=0, anchor='center')
-        tk.Label(self.frame_1, text="By: TommyTuoTone", font=('Arial', 15, 'bold'), fg='#2ea043', bg='#202124').pack(padx=0, pady=0, anchor='center')
-
-        tk.Label(self.frame_1, text="Password Length:", font=('Arial', 14, 'bold'), fg='#2ea043', bg='#202124').pack(padx=0, pady=0, anchor='center')
-
-        self.spinbox = tk.Spinbox(self.frame_1, font=('Arial', 10, 'bold'), readonlybackground= '#2ea043', cursor='arrow', from_=8, to=100, state='readonly', width=6,)
+        self.spinbox = tk.Spinbox(self.frame_2, font=('Arial', 10, 'bold'), readonlybackground= '#B4A5A5', cursor='arrow', from_=8, to=100, state='readonly', width=6,)
         self.spinbox.pack(padx=0, pady=0, anchor='center')
 
-        tk.Button(self.frame_1, text="Generate Password", width=15, font=('Arial', 16, 'bold'), bg="#2ea043", fg='#202124', activebackground='#202124', activeforeground='#2ea043', border= 0,
+        tk.Button(self.frame_2, text="Generate Password", width=15, font=('Arial', 16, 'bold'), bg="#B4A5A5", fg='#202124', activebackground='#202124', activeforeground='#B4A5A5', border= 0,
             command=self.generate_and_populate).pack(padx=0, pady=5, anchor='center')
 
-        self.textbox = tk.Text(self.frame_1, height=5, width=22, font=('Arial', 12, 'bold',), bg='#2ea043', cursor='arrow', state='disabled', borderwidth=1, relief='flat', border= 0)
+        self.textbox = tk.Text(self.frame_2, height=5, width=22, font=('Arial', 12, 'bold',), bg='#B4A5A5', cursor='arrow', state='disabled', borderwidth=1, relief='flat', border= 0)
         self.textbox.pack(padx=0, pady=0, anchor='center')
 
-        tk.Button(self.frame_1, text="Copy to Clipboard", width=15, font=('Arial', 16, 'bold'), bg='#2ea043', fg='#202124', activebackground='#202124', activeforeground='#2ea043', border= 0,
+        tk.Button(self.frame_2, text="Copy to Clipboard", width=15, font=('Arial', 16, 'bold'), bg='#B4A5A5', fg='#202124', activebackground='#202124', activeforeground='#B4A5A5', border= 0,
             command=self.copy_to_clipboard).pack(padx=0, pady=5, anchor='center')
 
         self.spinbox.bind("<MouseWheel>", self.on_spinbox_scroll)
@@ -83,7 +79,7 @@ class PassGeneratorApp:
             textbox_fg = 'red'
         else:
             generated_password = self.generate_secrets_password(password_length)
-            textbox_bg = '#2ea043'
+            textbox_bg = '#B4A5A5'
             textbox_fg = '#202124'
 
         self.textbox.configure(state='normal', bg=textbox_bg, fg=textbox_fg)
@@ -101,10 +97,10 @@ class PassGeneratorApp:
 
     def flash_textbox(self, times=2, delay=0.1):
         for i in range(times):
-            self.textbox.configure(bg='#202124', fg='#2ea043')
+            self.textbox.configure(bg='#202124', fg='#B4A5A5')
             self.root.update()
             time.sleep(delay)
-            self.textbox.configure(bg='#2ea043', fg='#202124')
+            self.textbox.configure(bg='#B4A5A5', fg='#202124')
             self.root.update()
             time.sleep(delay)
 

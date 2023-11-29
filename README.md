@@ -4,15 +4,12 @@ Password Generator with GUI
 
 
 
-<p align="center">
+<div align="center">
   
+![app showcase gif](https://github.com/TommyTuoTone/PassGeneratorwithGui/assets/129240164/0d11a66c-e300-4b05-b74c-783b4cfbfd6c)
 
-https://github.com/TommyTuoTone/PassGeneratorwithGui/assets/129240164/96fffc6e-fe88-46a8-97e2-b978936cfff2
-
-
-
-
-</p>
+  
+</div>
 
 
     

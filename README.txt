@@ -3,7 +3,7 @@
 #  |     ___/\__  \  /  ___//  ___/ /   \  ____/ __ \ /    \_/ __ \_  __ \__  \\   __\/  _ \_  __ \
 #  |    |     / __ \_\___ \ \___ \  \    \_\  \  ___/|   |  \  ___/|  | \// __ \|  | (  <_> )  | \/
 #  |____|    (____  /____  >____  >  \______  /\___  >___|  /\___  >__|  (____  /__|  \____/|__|
-# PassGenerator   \/  By:\/Tom  \/          \/     \/     \/     \/           \/
+# PassGenerator   \/  By:\/Tom R\/          \/     \/     \/     \/           \/
 
 Password Generator with GUI
 A python based password generator project with GUI.
@@ -13,3 +13,5 @@ Should you actually use this program to generate your passwords?
 Probably not, this is more of a personal project for learning.
 
 License: MIT
+
+Packaged using auto-py-to-exe 2.42.0
